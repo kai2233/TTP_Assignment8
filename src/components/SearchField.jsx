@@ -1,12 +1,19 @@
-import React, { useState } from 'react';
-import App from './App';
+import React, { useState } from "react";
+import App from "./App";
 const SearchField = () => {
-  const [searchInput, setSearchInput] = useState('');
+  const [searchInput, setSearchInput] = useState("");
 
   return (
-    <div>
-    <input type="text" placeholder="search field" onChange={e=>{setSearchInput(e.target.value)}}/> 
-    <App searchInfo={searchInput}/>
+    <div className="search-field">
+      <input
+        className="textbox"
+        type="text"
+        placeholder="Enter to search giphy"
+        onChange={(e) => {
+          setSearchInput(e.target.value);
+        }}
+      />
+      <App searchInfo={searchInput} />
     </div>
   );
 };
